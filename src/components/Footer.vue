@@ -1,12 +1,20 @@
 <template>
   <div class="footer">
-    <p>Footer</p>
+    <p class="copyright">
+      <a class="mu-dev" href="https://joshmu.dev" target="_blank"
+        >MU - {{ currentYear }}</a
+      >
+    </p>
   </div>
 </template>
 <script>
 export default {
   setup() {
-    return {}
+    const currentYear = new Date().getFullYear()
+
+    return {
+      currentYear,
+    }
   },
 }
 </script>
@@ -20,5 +28,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .copyright {
+    $opacity: 0.75;
+    letter-spacing: 3px;
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+    opacity: $opacity;
+    @include hover-underline($opacity);
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <main class="content">content</main>
+  <main class="content"></main>
 </template>
 <script>
 export default {
@@ -8,9 +8,11 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .content {
-  background-color: lightcoral;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   flex: 1;
 }
 </style>

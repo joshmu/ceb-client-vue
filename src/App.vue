@@ -34,6 +34,8 @@ export default {
 @import './styles/variables.scss';
 
 .app-wrapper {
+  background-color: $background-primary;
+  color: $color-primary;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +45,8 @@ export default {
     display: flex;
     flex: 1;
     width: 100%;
+    max-width: $breakpoint-lg;
+    margin: auto;
     min-height: calc(100vh - #{($header-height + $footer-height)});
   }
 }

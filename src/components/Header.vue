@@ -1,9 +1,11 @@
 <template>
   <header class="header">
-    <div class="logo"><h1>CEB</h1></div>
+    <div class="logo">
+      <a href="#"><h1>CEB</h1></a>
+    </div>
     <ul class="menu">
       <li class="menu-item">About</li>
-      <li class="menu-item">Contact</li>
+      <li class="menu-item"><a href="mailto:mu@joshmu.com">Contact</a></li>
     </ul>
   </header>
 </template>
@@ -31,28 +33,13 @@ export default {
   .menu {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     .menu-item {
-      position: relative;
-      cursor: pointer;
-      &:after {
-        content: '';
-        position: absolute;
-        height: 1px;
-        background-color: white;
-        width: 0%;
-        bottom: 0;
-        left: 0;
-        transition: opacity, width 0.3s ease-in-out;
-        opacity: 0;
-      }
-      &:hover {
-        &:after {
-          opacity: 1;
-          width: 100%;
-        }
-      }
+      $underline-opacity: 1;
+      padding: 0.5rem 1rem;
+      @include hover-underline($underline-opacity);
     }
   }
 }
