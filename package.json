@@ -1,11 +1,12 @@
 {
-  "name": "ceb-vue",
+  "name": "ceb-client",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "vue": "^3.0.4"
   },
   "devDependencies": {

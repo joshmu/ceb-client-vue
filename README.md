@@ -2,6 +2,6 @@
 
 Rewriting the front end of CEB crypto bot utilizing Vue 3.0 ⚡️
 
-## run it
+## develop
 
-`npm run dev`
+`npm run vercel-dev`
